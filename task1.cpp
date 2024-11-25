@@ -26,7 +26,7 @@ int main() {
     for (int i = 0; i < NMAX; i++) {
         for (int j = i; j < NMAX; j++) {
             if (not flag) {
-                if (i == 0 & m[i] == m[j]) flag = true;
+                if (i == 0 & m[i] == m[j] & i != j) flag = true;
             }
             if (is_last_digit_less(m[i], m[j])) std::swap(m[i], m[j]);
         }
@@ -36,7 +36,6 @@ int main() {
         если повторяющихся элементов нет, 
         но в ином случае добавляет проверку каждые NMAX раз.*/
     }
-    
     if (flag) {
         for (int i = 0; i < n; i++) {
             std::cout << m[i] << " ";
